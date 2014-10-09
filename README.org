@@ -1,0 +1,2 @@
+* 8-SC-DigitalDie
+** A project to design, manufacture and program a digital die.
