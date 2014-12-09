@@ -1,8 +1,8 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
-#+TITLE: Title
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  toc:nil
+#+TITLE: Assessment
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
@@ -81,4 +81,16 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
+* Badge criteria guidance
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** MarkIt
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+- Below guidance has been provided for the award of badges.
+| <40>                                     | <40>                                     | <40>                                     | <40>                                     |
+| Criteria                                 | Silver                                   | Gold                                     | Platinum                                 |
+|------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
 
