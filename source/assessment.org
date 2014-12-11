@@ -93,4 +93,11 @@
 | <40>                                     | <40>                                     | <40>                                     | <40>                                     |
 | Criteria                                 | Silver                                   | Gold                                     | Platinum                                 |
 |------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
+| Random Number Generation                 | Explain why chips can't produce true random numbers | Explain how environmental factors can help to produce pseudorandom numbers |                                          |
+| Floating Pins                            | Understand how a pin can float between 1 and 0 | Understand that a pull down resistor can ground a pin to 0 | Understand how a pull down resistor grounds a pin |
+| Circuit Design                           | Design a digital die circuit with some assistance | Design a digital die circuit with minimal assistance | Design a digital die circuit independently |
+| PCB Design                               | Design a PCB with some assistance        | Design a PCB with minimal assistance     | Design a PCB independently               |
+| Soldering                                | Solder a working PCB                     | Solder a working PCB without dry joints or bridges | Solder a PCB with neat flying leads      |
+| 3D design                                | Design a housing from the sketches provided | Independently design a housing           | Independently design a housing and use it in the finished project |
+| Programming                              | Program the micro-controller with some assistance | Program the micro-controller with limited assistance | Independently program the micro-controller |
 

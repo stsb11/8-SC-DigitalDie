@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
-#+TITLE: The Digital Die
+#+TITLE: The Digital Die - Pull Down Resistors
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
@@ -18,7 +18,7 @@
     </div>
 #+END_HTML
 
-* COMMENT Use as a template
+* The problem with digital inputs
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -82,35 +82,3 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* What is a Die?
-[[https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/6sided_dice.jpg/640px-6sided_dice.jpg]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- A Die can be used to generate a single digit /random/ number between 1 and 6.
-- Having a digital version could be quite handy, especially when it's time for family board games.
-- There is a small problem with generating random numbers using a microprocessor or a computer however. In fact it's nearly impossible.
-** Research It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: research
-:END:
-
-- Have a read of [[http://www.howtogeek.com/183051/htg-explains-how-computers-generate-random-numbers/][this article]]. It explains (sometimes in a little too much detail) why random numbers are important.
-** Badge It - Silver
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Try and answer the following questions:
-  1. What is a pseudorandom number?
-  2. What is a true random number?
-  3. What is the example given for how a computer can generate a random number?
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- You've had some experience with programming micro-controllers now, so you should have some idea of how they work.
-- Brainstorm some different ideas for how different input components could be used to generate some random numbers. What sensors could you use?
