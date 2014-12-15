@@ -98,7 +98,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
-
 - Have a read of [[http://www.howtogeek.com/183051/htg-explains-how-computers-generate-random-numbers/][this article]]. It explains (sometimes in a little too much detail) why random numbers are important.
 ** Badge It - Silver
 :PROPERTIES:

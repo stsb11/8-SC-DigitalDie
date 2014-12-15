@@ -17,8 +17,7 @@
         </div>
     </div>
 #+END_HTML
-
-* The problem with digital inputs
+* COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -27,7 +26,6 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 
-- 
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
@@ -72,7 +70,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-
+ 
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -83,3 +81,85 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* The problem with Microcontroller in the real world.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- You should know that digital data is represented by 1s and 0s.
+- We often regard 0 as being *off* and 1 as being *on*.
+- So in a simple circuit, we could use a switch to control the digital data. When the switch is closed, current flows and therefore it is on. If the switch is open, no current flows and theefore it is off.
+- We can use this knowledge to build a really simple circuit.
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+- We'll use circuit wizard to try and set up a simple digital circuit.
+- We want to use a microcontroller (in this case a GENIE C08), to turn an LED on and off.
+- We also want to use a 9V battery to power our circuit.
+- Set up a circuit like the one shown below.
+[[file:img/basicCiruit.png]]
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- We'll need a little program to go with our circuit, before we can test it out.
+- Create a flowchart like the one shown below.
+file:img/basicFlowchart.png
+- Now flip back to the circuit diagram and test your circuit to make sure that it works.
+file:img/blink.gif
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- So in theory we now have a circuit where we can control an LED using a microcontroller.
+- But the real world is not so simple.
+- Go to =Project>Simulation= and turn on Explosions.
+- Simulate your circuit again and see what happens.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- It turns out that in the real world, GENIE cips don't like such high voltages.
+- To make sure we don't destroy our chips, we need to make sure we keep the supplied voltage below 6V. 5V is always a safe bet.
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+- Getting 5V from batteries isn't easy. We could use 3 x 1.5V AA batteries to give us 4.5V, and that would probably work, but that would cost us more money.
+- Instead we'll use a component called a =Voltage Regulator= to reduce the voltage we supply to the GENIE chip.
+- You can find the Voltage Regulator component in the Power Supplies menu on Circuit Wizard. It defaults to the 7805, which is the one we want to use.
+file:img/7805.png
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- You can now run your simulation again and /everything is awesome.../
+file:img/blink2.gif
+- Or is it?
+- Although the circuit may appear to work in Circuit Wizard, in the real world this circuit would be very tempremental, and may not work at all.
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Write up your findings so far. Make sure you can answer the following questions, and use screen shots of your own circuit to help your explanation.
+  1. What is digital data?
+  2. Why can't we use 9V with a GENIE chip?
+  3. What does a Voltage Regulator do?
+* Pull Down Resistors
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Whenever an electrical engineer has a bug in her circuit, she'll grab her multimeter to see what's going on.
+- You can find a =digital multimeter= in the Virtual Instruments menu.
+- We'll place one of the probes on the digital input and the other probe on the ground rail.
+file:img/multimeter.png
+- Simulate your circuit again and note down the voltage readings when the switch is open and closed.
+- 

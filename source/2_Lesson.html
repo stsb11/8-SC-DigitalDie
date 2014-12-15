@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The Digital Die - Pull Down Resistors</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Digital Die - Pull Down Resistors</h1>
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> The problem with Microcontroller in the real world.</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Learn It</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>You should know that digital data is represented by 1s and 0s.
+</li>
+<li>We often regard 0 as being <b>off</b> and 1 as being <b>on</b>.
+</li>
+<li>So in a simple circuit, we could use a switch to control the digital data. When the switch is closed, current flows and therefore it is on. If the switch is open, no current flows and theefore it is off.
+</li>
+<li>We can use this knowledge to build a really simple circuit.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 build">
+<h3 id="sec-1-2">Build It</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>We'll use circuit wizard to try and set up a simple digital circuit.
+</li>
+<li>We want to use a microcontroller (in this case a GENIE C08), to turn an LED on and off.
+</li>
+<li>We also want to use a 9V battery to power our circuit.
+</li>
+<li>Set up a circuit like the one shown below.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/basicCiruit.png" alt="basicCiruit.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 test">
+<h3 id="sec-1-3">Test It</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>We'll need a little program to go with our circuit, before we can test it out.
+</li>
+<li>Create a flowchart like the one shown below.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/basicFlowchart.png" alt="basicFlowchart.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now flip back to the circuit diagram and test your circuit to make sure that it works.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/blink.gif" alt="blink.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3 try">
+<h3 id="sec-1-4">Try It</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>So in theory we now have a circuit where we can control an LED using a microcontroller.
+</li>
+<li>But the real world is not so simple.
+</li>
+<li>Go to <code>Project&gt;Simulation</code> and turn on Explosions.
+</li>
+<li>Simulate your circuit again and see what happens.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3 learn">
+<h3 id="sec-1-5">Learn It</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>It turns out that in the real world, GENIE cips don't like such high voltages.
+</li>
+<li>To make sure we don't destroy our chips, we need to make sure we keep the supplied voltage below 6V. 5V is always a safe bet.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3 build">
+<h3 id="sec-1-6">Build It</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Getting 5V from batteries isn't easy. We could use 3 x 1.5V AA batteries to give us 4.5V, and that would probably work, but that would cost us more money.
+</li>
+<li>Instead we'll use a component called a <code>Voltage Regulator</code> to reduce the voltage we supply to the GENIE chip.
+</li>
+<li>You can find the Voltage Regulator component in the Power Supplies menu on Circuit Wizard. It defaults to the 7805, which is the one we want to use.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/7805.png" alt="7805.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-7" class="outline-3 test">
+<h3 id="sec-1-7">Test It</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>You can now run your simulation again and <i>everything is awesome&#x2026;</i>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/blink2.gif" alt="blink2.gif" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Or is it?
+</li>
+<li>Go back to <code>Project&gt;Simulation</code> and turn on <code>Faults</code>.
+</li>
+<li>Simulate your circuit and see what happens.
+</li>
+<li>We have a problem, but understanding what is going on is going to need some investigation.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-8" class="outline-3 badge">
+<h3 id="sec-1-8">Badge It</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Write up your findings so far. Make sure you can answer the following questions, and use screen shots of your own circuit to help your explanation.
+<ol class="org-ol">
+<li>What is digital data?
+</li>
+<li>Why can't we use 9V with a GENIE chip?
+</li>
+<li>What does a Voltage Regulator do?
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Pull Down Resistors</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Learn It</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Whenever an electrical engineer has a bug in her circuit, she'll grab her multimeter to see what's going on.
+</li>
+<li>You can find a <code>digital multimeter</code> in the Virtual Instruments menu.
+</li>
+<li>We'll place one of the probes on the digital input and the other probe on the ground rail.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/multimeter.png" alt="multimeter.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Simulate your circuit again and note down the voltage readings when the switch is open and closed.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
