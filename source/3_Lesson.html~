@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>The Digital Die - An Introduction</title>
+<title>The Digital Die - Programming a Die</title>
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <style type="text/css">
@@ -139,7 +139,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">The Digital Die - An Introduction</h1>
+<h1 class="title">The Digital Die - Programming a Die</h1>
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
       <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
@@ -157,60 +157,163 @@ for the JavaScript code in this tag.
     </ul>
   </div>
 <div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1"><span class="section-number-2">1</span> What is a Die?</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Inputs and Outputs to generate 1-6</h2>
 <div class="outline-text-2" id="text-1">
-
-<div class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/6sided_dice.jpg/640px-6sided_dice.jpg" alt="640px-6sided_dice.jpg" />
-</p>
-</div>
 </div>
 <div id="outline-container-sec-1-1" class="outline-3 learn">
 <h3 id="sec-1-1">Learn It</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>A Die can be used to generate a single digit <i>random</i> number between 1 and 6.
+<li>GENIE chips can be programmed with several configurations.
 </li>
-<li>Having a digital version could be quite handy, especially when it's time for family board games.
+<li>We'll need 1 pin to provide power to the chip and 1 pin to tie it to ground.
 </li>
-<li>There is a small problem with generating random numbers using a microprocessor or a computer however. In fact it's nearly impossible.
+<li>We'll need 1 pin to program the chip.
+</li>
+<li>We'll need 1 pin to receive an input.
+</li>
+<li>This leaves us with 4 pins to play with.
+</li>
+<li>By right clicking on the GENIE chip in Circuit Wizard, we can choose &gt;Program&gt;Program Settings
 </li>
 </ul>
+
+<div class="figure">
+<p><img src="img/programChoice.png" alt="programChoice.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Make sure you have a C08 chip sellected.
+</li>
+<li>Now you can use the check boxes to make different pins inputs or outputs.
+</li>
+<li>We're going to want to have as many outputs as possible, so this configuration is probably the best.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/1in4out.png" alt="1in4out.png" />
+</p>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 research">
-<h3 id="sec-1-2">Research It</h3>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 try">
+<h3 id="sec-1-2">Try It</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
-<li>Have a read of <a href="http://www.howtogeek.com/183051/htg-explains-how-computers-generate-random-numbers/">this article</a>. It explains (sometimes in a little too much detail) why random numbers are important.
+<li>If we want to make a die, we need to be able to represent the numbers 1-6 using LEDs
+</li>
+<li>But we can't simply connect an LED to each output pin, as we only have 4 output pins to use.
+</li>
+<li>Build the circuit as shown below.
 </li>
 </ul>
+
+<div class="figure">
+<p><img src="img/initialCircuit.png" alt="initialCircuit.png" />
+</p>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3 badge">
-<h3 id="sec-1-3">Badge It - Silver</h3>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 try">
+<h3 id="sec-1-3">Try It</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li>Try and answer the following questions:
-<ol class="org-ol">
-<li>What is a pseudorandom number?
+<li>Here's a circuit that allows any number from 1-6 to be displayed by sending output pins high.
 </li>
-<li>What is a true random number?
+</ul>
+
+<div class="figure">
+<p><img src="img/arrangement1.png" alt="arrangement1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Try to come up with your own arrangement, where we could have any number of LEDs fom 1-6, switch on using only 4 outputs.
 </li>
-<li>What is the example given for how a computer can generate a random number?
-</li>
-</ol>
+<li>Screenshot your circuit when you have finished it.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-4" class="outline-3 badge">
-<h3 id="sec-1-4">Badge It - Gold</h3>
-<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> A Program for the Die</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 try">
+<h3 id="sec-2-1">Try It</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
-<li>You've had some experience with programming micro-controllers now, so you should have some idea of how they work.
+<li>We're going to use the circuit shown below to program our Die.It's identical to the one before it, but the LEDs have been placed differently.
 </li>
-<li>Brainstorm some different ideas for how different input components could be used to generate some random numbers. What sensors could you use?
+</ul>
+
+<div class="figure">
+<p><img src="img/studentCircuit.png" alt="studentCircuit.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>It's a little hard to construct, so you can <a href="doc/StudentCircuit.cwz">download it here</a>
+</li>
+<li>It might help you to understand how the outputs control the LEDs by using the simulation below.
+</li>
+</ul>
+<object data="js/outputs.html" width='400px' height='400px'></object>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3 badge">
+<h3 id="sec-2-2">Badge It - Silver</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Use the simulation to write down which outputs will need to be set to <i>high</i> for each number the die will generate from 1 through to 6.
+</li>
+<li>Using the diagram below and any graphics package you choose, draw a basic diagram to show how the arrangement of LEDs will be connected to the pins of the GENIE chip.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/genieChip.png" alt="genieChip.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3 learn">
+<h3 id="sec-2-3">Learn It</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>With this information, you should now be able to create a program to generate the random numbers.
+</li>
+<li>You've quite a bit of experience using flowcharts to program GENIE chips already, so here is the start of the flowchart only.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/partialProgram.png" alt="partialProgram.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3 badge">
+<h3 id="sec-2-4">Badge It - Gold</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Use the file you downloaded earlier and your knowledge of which outputs to send high to complete the program and test it to make sure it works.
+</li>
+<li>Take a screenshot of your program when you have finished.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3 badge">
+<h3 id="sec-2-5">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>There are many ways of solving this probems.
+</li>
+<li>See if you can come up with an alternative algorithm that doesn't use the <code>Random</code> block.
+</li>
+<li>Take a screenshot of your program when it is complete.
 </li>
 </ul>
 </div>

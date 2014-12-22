@@ -79,7 +79,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-
+ 
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -90,34 +90,41 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* What is a Die?
-[[https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/6sided_dice.jpg/640px-6sided_dice.jpg]]
+* Assembling the Housing
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Learn It
+** Build It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
+:HTML_CONTAINER_CLASS: build
 :END:
-- A Die can be used to generate a single digit /random/ number between 1 and 6.
-- Having a digital version could be quite handy, especially when it's time for family board games.
-- There is a small problem with generating random numbers using a microprocessor or a computer however. In fact it's nearly impossible.
-** Research It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: research
-:END:
-- Have a read of [[http://www.howtogeek.com/183051/htg-explains-how-computers-generate-random-numbers/][this article]]. It explains (sometimes in a little too much detail) why random numbers are important.
-** Badge It - Silver
+- Here are the components you'll need to assemble the Digital Die Housing.
+file:img/build1.jpg
+- Push the M3 machine screws through the holse of the base of the die housing and secure them with M3 nuts.
+file:img/build4.jpg
+- Place an LED ring over each of your LEDs.
+file:img/build7.jpg
+- Place an LED clip into one of the LED holes in the top of the housing.
+file:img/build8.jpg
+- Feed the LED up through the hole, so it is held in place by the clip.
+file:img/build9.jpg
+- Slide the ring onto the LED clip, so it holds the LED firmly in place.
+file:img/build10.jpg
+- Then do the same for the other LEDs.
+file:img/build11.jpg
+- Unscrew the nut and washer from the switch.
+file:img/build12.jpg
+- Then secure the switch into the top of the housing.
+file:img/build13.jpg
+- Secure the PCB to the bottom of the housing.
+file:img/build15.jpg
+- Add some spacers.
+file:img/build16.jpg
+- Then secure the top with washers and nuts.
+file:img/build19.jpg
+** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Try and answer the following questions:
-  1. What is a pseudorandom number?
-  2. What is a true random number?
-  3. What is the example given for how a computer can generate a random number?
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- You've had some experience with programming micro-controllers now, so you should have some idea of how they work.
-- Brainstorm some different ideas for how different input components could be used to generate some random numbers. What sensors could you use?
+
+- Take pictures of your digital die for assessment.

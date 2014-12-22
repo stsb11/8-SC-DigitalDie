@@ -1,21 +1,30 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
-#+TITLE: The Digital Die - Pull Down Resistors
+
+#+TITLE: The Digital Die
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
-<div class="github-fork-ribbon-wrapper left">
-        <div class="github-fork-ribbon">
-            <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
-        </div>
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
     </div>
-    <div class="github-fork-ribbon-wrapper right-bottom">
-        <div class="github-fork-ribbon">
-            <a href="../index.html">Back to Index</a>
-        </div>
-    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+
+    </ul>
+  </div>
 #+END_HTML
 * COMMENT Use as a template
 :PROPERTIES:
@@ -141,7 +150,13 @@ file:img/7805.png
 file:img/blink2.gif
 - Or is it?
 - Although the circuit may appear to work in Circuit Wizard, in the real world this circuit would be very tempremental, and may not work at all.
-** Badge It
+- Look at the breadboard below, showing the set up of the circuit.
+[[file:img/faulty.png]]
+- At first it looks okay, but notice the that LED is illuminated. This means that the output pin on the GENIE chip is high, even when the switch hasn't been closed.
+- Now look at the video below, and you'll see that /everything is not quite so awesome.../
+[[file:img/faulty.gif]]
+- Whether the switch is open or closed, the LED stays illuminated.
+** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -162,4 +177,51 @@ file:img/blink2.gif
 - We'll place one of the probes on the digital input and the other probe on the ground rail.
 file:img/multimeter.png
 - Simulate your circuit again and note down the voltage readings when the switch is open and closed.
-- 
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Hopefully you can see that even when the switch is open, there is a Potential Difference between the input pin and the 0V rail.
+- Microcontrollers in reality treat voltage ranges as being eqivalent to a 0 or a 1.
+- For a pin to be considered high, the voltage between the pin and ground should be 0.8 x the supply voltage.
+  - For this circuit that means the GENIE chip will read a pin as high (1) when the potential difference is above 0.8 x 5V = 4V
+- For a pin to be considered low, the voltage between the pin and ground should be 0.2 x the supply voltage.
+  - For this circuit that means the GENIE chip will read a pin as low (0) when the potential difference is below 0.2 x 5V = 1V
+- As you can see from your readings, the voltage isn't clearly above 4V or below 1V. This means the microcontroller doesn't know if the pin is high or low. We describe this as being a floating pin, and it can cause all kinds of unpredictable behaviour.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- So in theory we now have a circuit where we can control an LED using a microcontroller.
+- But the real world is not so simple.
+- Go to =Project>Simulation= and turn on Explosions.
+- Simulate your circuit again and see what happens.
+
+- Luckily there is a solution. Place a 100kΩ resistor between the pin and the ground rail, as shown below.
+[[file:img/100kpullDown.png]]
+- Now you'll see that the input voltage when the switch is close is very low (the reading should have changed to mV which means 1000ths of a Volt.)
+- This type of resistor is called a pull down resistor and ensures that the GENIE chip reads a logical 0 when the swithch is open and a logical 1 when the switch is closed.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+- Let's see if the 100kΩ resistor helps us on our real circuit.
+[[file:img/pullDown.gif]]
+- Once again /everything is awesome.../
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Write up your findings so far. Makr sure you can answer the following questions, and use screen shots of your circuit to help your explanation.
+  - What voltages are required to give a logical 0 or 1 on an input pin for a GENIE chip?
+  - What is meant by a floating pin?
+  - How does a pull down resistor prevent a pin from floating?
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- You can use a breadboard to build the circuit shown in the videos, and test out what happens when you add a pull down resistor yourself.
+- Here is a diagram that can help you to build the board.
+[[file:img/breadboard.png]]
+- If you build it take photos or video of it in operation, with or without a pull down resistor.
