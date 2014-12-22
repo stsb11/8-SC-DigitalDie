@@ -13,7 +13,6 @@
     </div>
 </div>
 #+END_HTML
-
 * [[file:pages/1_Lesson.html][Week 1 - Random and Pseudorandom]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
