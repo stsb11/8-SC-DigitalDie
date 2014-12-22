@@ -1,1 +1,2 @@
-* Project Title
+* The Digital Die
+- Source files in org-mode in source directory.
