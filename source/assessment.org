@@ -97,5 +97,5 @@
 | Pull Down Resistors                      | Understand how a pin can float between 1 and 0 | Understand that a pull down resistor can ground a pin to 0 | Understand how a pull down resis         |
 | Circuit Design and Programming           | Design a digital die circuit with some assistance | Design a digital die circuit with minimal assistance | Design a digital die circuit independently |
 | Soldering                                | Solder a working PCB                     | Solder a working PCB without dry joints or bridges | Solder a PCB with neat flying leads      |
-| Assembly                                 |                                          |                                          |                                          |
+| Assemble the housing                     |                                          |                                          |                                          |
 
