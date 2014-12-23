@@ -1,21 +1,31 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  toc:nil
-#+TITLE: Assessment
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
+
+#+TITLE: The Digital Die
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
-<div class="github-fork-ribbon-wrapper left">
-        <div class="github-fork-ribbon">
-            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
-        </div>
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
     </div>
-    <div class="github-fork-ribbon-wrapper right-bottom">
-        <div class="github-fork-ribbon">
-            <a href="../index.html">Back to Index</a>
-        </div>
-    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+
+    </ul>
+  </div>
 #+END_HTML
 
 * COMMENT Use as a template
@@ -93,9 +103,11 @@
 | <40>                                     | <40>                                     | <40>                                     | <40>                                     |
 | Criteria                                 | Silver                                   | Gold                                     | Platinum                                 |
 |------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
-| Random Number Generation                 | Explain why chips can't produce true random numbers | Explain how environmental factors can help to produce pseudorandom numbers |                                          |
-| Pull Down Resistors                      | Understand how a pin can float between 1 and 0 | Understand that a pull down resistor can ground a pin to 0 | Understand how a pull down resis         |
-| Circuit Design and Programming           | Design a digital die circuit with some assistance | Design a digital die circuit with minimal assistance | Design a digital die circuit independently |
-| Soldering                                | Solder a working PCB                     | Solder a working PCB without dry joints or bridges | Solder a PCB with neat flying leads      |
-| Assemble the housing                     |                                          |                                          |                                          |
+| Random Number Generation                 | Explain how computers produce random numbers | Explain how environmental factors can help to produce pseudorandom numbers |                                          |
+| Pull Down Resistors                      | Understand the need for a voltage regulator | Understand the causes of a floating pin and how it is resolved | Demonstrate a floating pin on a breadboard |
+| Programming a Die                        | Understand the physical layout of the pins on a GENIE chip | Program a digital die                    | Program a digital die without using the built in random number generator |
+| Soldering                                | Solder your componenets neatly to the board | Add neat flying wires to attach your LEDs | Upload and run your program              |
+| Housing Assembly                         | Assemble your digital die board into a housing |                                          |                                          |
+| Cheating                                 |                                          |                                          | Write a program that enables you to fix the die roles. |
+
 
