@@ -192,12 +192,7 @@ file:img/multimeter.png
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- So in theory we now have a circuit where we can control an LED using a microcontroller.
-- But the real world is not so simple.
-- Go to =Project>Simulation= and turn on Explosions.
-- Simulate your circuit again and see what happens.
-
-- Luckily there is a solution. Place a 100kΩ resistor between the pin and the ground rail, as shown below.
+- Luckily there is a solution. Place a 10kΩ resistor between the pin and the ground rail, as shown below.
 [[file:img/100kpullDown.png]]
 - Now you'll see that the input voltage when the switch is close is very low (the reading should have changed to mV which means 1000ths of a Volt.)
 - This type of resistor is called a pull down resistor and ensures that the GENIE chip reads a logical 0 when the swithch is open and a logical 1 when the switch is closed.
@@ -205,8 +200,7 @@ file:img/multimeter.png
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
-- Let's see if the 100kΩ resistor helps us on our real circuit.
+- Let's see if the 10kΩ resistor helps us on our real circuit.
 [[file:img/pullDown.gif]]
 - Once again /everything is awesome.../
 ** Badge It - Gold
