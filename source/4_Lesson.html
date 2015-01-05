@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The Digital Die</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Digital Die</h1>
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Soldering the board</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 build">
+<h3 id="sec-1-1">Build It</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<ul class="org-ul">
+<li>Your initial board should look like this.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/1.jpg" alt="1.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You should be able to solder on the first few components without any guidance.
+</li>
+<li>Start with the smallest components first.
+</li>
+<li><b>Don't solder on the LEDs, battersnap or switch yet.</b>
+</li>
+<li><b>Make sure the diode and the 7805 voltage regulator are in the correct way around</b> (or you might give yourself a bit of a suprise).
+</li>
+<li>Your board should look like this when it is finsihed.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/PCBvis1.png" alt="PCBvis1.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 build">
+<h3 id="sec-1-2">Build It</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>With the basic components soldered to the board, you now need to add in the LEDs.
+</li>
+<li>The LEDs need to be on flying wires.
+</li>
+<li>Follow the guide below <b>carefully</b>.
+</li>
+<li>Take an LED and two 50mm lengths of <b>multicore</b> wire.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/22.jpg" alt="22.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Wrap the ends of a wire around the leg of the led (red on the long leg).
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/23.jpg" alt="23.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now clamp the LED and use a <b>very small</b> quantity of solder to bond the wire to the leg.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/24.jpg" alt="24.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You can now repeat the process with the other leg.
+</li>
+<li>Next you'll need two small lengths of heatshrink.
+</li>
+<li>Slide the heatshrink over the solder-join and use the side of your soldering iron to gently heat the tubing.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/28.jpg" alt="28.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now you can solder the wires onto your PCB, and twist them so they look neat
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/31.jpg" alt="31.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now just six more LEDs to solder.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 build">
+<h3 id="sec-1-3">Build It</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Your switch and battery-snap are soldered in much the same way.
+</li>
+<li>Don't forget to pass your battery snap through the strain hole as shown below before soldering it on.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/44.jpg" alt="44.jpg" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3 badge">
+<h3 id="sec-1-4">Badge It</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Take a picture of the solder side and component side of your board.
+</li>
+<li>Take a picture of the flying leads of the LEDs.
+</li>
+<li>Take a picture of your battery snap and switch.
+</li>
+<li>Upload your program to your board and make sure it works. Take a <b>short</b> video of your board working.
+</li>
+<li>Your badge will be awarded according to the quality of your work.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
