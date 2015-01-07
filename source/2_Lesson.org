@@ -90,7 +90,7 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* The problem with Microcontroller in the real world.
+* The problem with Microcontrollers in the real world.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
