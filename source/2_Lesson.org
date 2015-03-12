@@ -216,6 +216,9 @@ file:img/multimeter.png
 :HTML_CONTAINER_CLASS: badge
 :END:
 - You can use a breadboard to build the circuit shown in the videos, and test out what happens when you add a pull down resistor yourself.
-- Here is a diagram that can help you to build the board.
+- Here is a diagram that can help you to build the board without a pulldown resistor
 [[file:img/breadboard.png]]
+- Build the board and use a pre-programmed chip from your teacher to test it out.
+- Think where the pulldown resistor would go and then add it to the circuit.
+- Test it out again.
 - If you build it take photos or video of it in operation, with or without a pull down resistor.
