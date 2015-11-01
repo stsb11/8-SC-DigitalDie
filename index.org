@@ -3,13 +3,13 @@
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil  toc:nil
 #+TITLE: The Digital Die
-#+AUTHOR: Marc Scott
+#+AUTHOR: Stephen Brown
 
 
 #+BEGIN_HTML
 <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-        <a href="https://github.com/MarcScott/8-CS-Die">Fork me on GitHub</a>
+        <a href="https://github.com/stsb11/8-SC-DigitalDie">Fork me on GitHub</a>
     </div>
 </div>
 #+END_HTML
