@@ -207,7 +207,7 @@ file:img/multimeter.png
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Write up your findings so far. Makr sure you can answer the following questions, and use screen shots of your circuit to help your explanation.
+- Write up your findings so far. Make sure you can answer the following questions, and use screen shots of your circuit to help your explanation.
   - What voltages are required to give a logical 0 or 1 on an input pin for a GENIE chip?
   - What is meant by a floating pin?
   - How does a pull down resistor prevent a pin from floating?
