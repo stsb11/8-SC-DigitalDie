@@ -11,7 +11,7 @@
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-SC-DigitalDie">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -100,47 +100,41 @@
 :END:
 
 - Your initial board should look like this.
-[[file:img/1.jpg]]
+[[./img/pcbplain.jpg]]
 - You should be able to solder on the first few components without any guidance.
 - Start with the smallest components first.
-- *Don't solder on the LEDs, battersnap or switch yet.*
-- *Make sure the diode and the 7805 voltage regulator are in the correct way around* (or you might give yourself a bit of a suprise).
+- *Make sure the diode and the 78L05 voltage regulator are in the correct way around* (or you might give yourself a bit of a suprise).
 - Your board should look like this when it is finsihed.
-[[file:img/PCBvis1.png]]
+[[./img/allLEDonboard.jpg]]
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+- Don't forget to pass your battery snap through the strain hole as shown below before soldering it on.
+[[./img/batterywire.jpg]]
 ** Build It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: build
 :END:
 - With the basic components soldered to the board, you now need to add in the LEDs.
-- The LEDs need to be on flying wires.
+- The LEDs will be fitted using 2 spacers.
 - Follow the guide below *carefully*.
-- Take an LED and two 50mm lengths of *multicore* wire.
-file:img/22.jpg
-- Wrap the ends of a wire around the leg of the led (red on the long leg).
-file:img/23.jpg
-- Now clamp the LED and use a *very small* quantity of solder to bond the wire to the leg.
-file:img/24.jpg
-- You can now repeat the process with the other leg.
-- Next you'll need two small lengths of heatshrink.
-- Slide the heatshrink over the solder-join and use the side of your soldering iron to gently heat the tubing.
-file:img/28.jpg
-- Now you can solder the wires onto your PCB, and twist them so they look neat
-file:img/31.jpg
-- Now just six more LEDs to solder.
-** Build It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: build
-:END:
-- Your switch and battery-snap are soldered in much the same way.
-- Don't forget to pass your battery snap through the strain hole as shown below before soldering it on.
-file:img/44.jpg
+- Take an LED and the two spacers.
+[[./img/ledspacerstart.jpg]]
+- Place the one LED through the centre of the spacers.
+[[./img/ledspacer.jpg]]
+- Now holding the LED and spacers together, place the carefully on the PCB and solder the LED in place. 
+- *Make sure the LED is as close to the spacers as can be when you are finished soldering.*
+- You can now get the next 6 LED's ready.
+[[./img/allLED.jpg]]
+- You can now add the rest of the LED's. *Make sure you have the long leg(+) in the correct hole.*
+[[./img/allLEDonboard.jpg]]
+- *Now you must download your program to the board and test it before continuing.*
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Take a picture of the solder side and component side of your board.
-- Take a picture of the flying leads of the LEDs.
-- Take a picture of your battery snap and switch.
-- Upload your program to your board and make sure it works. Take a *short* video of your board working.
+- Upload your program to your board and make sure it works. Take a photo of your board working.
 - Your badge will be awarded according to the quality of your work.
 

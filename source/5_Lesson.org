@@ -11,7 +11,7 @@
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-SC-DigitalDie">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-SC-DigitalDie">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -99,29 +99,22 @@
 :HTML_CONTAINER_CLASS: build
 :END:
 - Here are the components you'll need to assemble the Digital Die Housing.
-file:img/build1.jpg
-- Push the M3 machine screws through the holse of the base of the die housing and secure them with M3 nuts.
-file:img/build4.jpg
-- Place an LED ring over each of your LEDs.
-file:img/build7.jpg
-- Place an LED clip into one of the LED holes in the top of the housing.
-file:img/build8.jpg
-- Feed the LED up through the hole, so it is held in place by the clip.
-file:img/build9.jpg
-- Slide the ring onto the LED clip, so it holds the LED firmly in place.
-file:img/build10.jpg
-- Then do the same for the other LEDs.
-file:img/build11.jpg
-- Unscrew the nut and washer from the switch.
-file:img/build12.jpg
-- Then secure the switch into the top of the housing.
-file:img/build13.jpg
-- Secure the PCB to the bottom of the housing.
-file:img/build15.jpg
-- Add some spacers.
-file:img/build16.jpg
-- Then secure the top with washers and nuts.
-file:img/build19.jpg
+[[./img/allparts.jpg]]
+- You will need to countersink the top panel to fit the screws.
+[[./img/countersink.jpg]]
+- Now place the top panel onto the board.
+- Hold a spacer in place and then push a screw through the top panel, spacer and PCB.
+- Now place the bottom panel on and put a nut on the screw, it should look like the picture below.
+[[./img/spacerfitting.jpg]]
+- Repeat the same process for the next 3 screws.
+- Once all the screws are in place, you will need to tighten them using a screwdriver.
+- *Be careful not to overtighten the screws as you can crack the acrylic panel.*
+[[./img/switchlid.jpg]]
+- You will now need to place the clip onto the switch to raise the switch height.
+- This simply clips into place. You can use a pair of long nose pliers to do this.
+[[./img/finished.jpg]]
+[[./img/finished bottom.jpg]]
+- You product is now complete and can be tested.
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
