@@ -100,7 +100,7 @@
 :END:
 - You should know that digital data is represented by 1s and 0s.
 - We often regard 0 as being *off* and 1 as being *on*.
-- So in a simple circuit, we could use a switch to control the digital data. When the switch is closed, current flows and therefore it is on. If the switch is open, no current flows and theefore it is off.
+- So in a simple circuit, we could use a switch to control the digital data. When the switch is closed, current flows and therefore it is on. If the switch is open, no current flows and therefore it is off.
 - We can use this knowledge to build a really simple circuit.
 ** Build It
 :PROPERTIES:
@@ -132,7 +132,7 @@ file:img/blink.gif
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- It turns out that in the real world, GENIE cips don't like such high voltages.
+- It turns out that in the real world, GENIE chips don't like such high voltages.
 - To make sure we don't destroy our chips, we need to make sure we keep the supplied voltage below 6V. 5V is always a safe bet.
 ** Build It
 :PROPERTIES:
